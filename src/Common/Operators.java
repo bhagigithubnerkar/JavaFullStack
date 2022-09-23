@@ -1,10 +1,8 @@
 package Common;
 
-import java.sql.SQLOutput;
-
 public class Operators{
    public static void main(String args[]){
-       // Unary Operator
+       // Unary Operator;
        int a=15;
        System.out.println(a++);  //15
        System.out.println(++a);  //17
