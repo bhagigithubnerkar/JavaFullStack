@@ -2,9 +2,16 @@ package Practice;
 
 public class Temperature {
     public static void main(String[] args) {
-        int F;
+        int F = 0;
         int C;
-        float L = (32F-32)* 5_556;
-        System.out.println("Conversion="+(L));
+        double L = (F - 32) / 1.8;
+        System.out.println("Conversion= " + (L));
+
+
+        }
+
+
+
+
     }
-}
+

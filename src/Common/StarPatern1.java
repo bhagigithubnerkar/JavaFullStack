@@ -1,5 +1,10 @@
 package Common;
-
+/* print the pattern
+     *
+     * *
+     * * *
+     * * * *
+ */
 public class StarPatern1 {
     public static void main(String[] args) {
         for (int i = 0; i <= 3; i++) {

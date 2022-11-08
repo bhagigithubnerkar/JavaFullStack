@@ -1,4 +1,11 @@
 package Common;
+/* print the pattern
+    *
+    * *
+    * * *
+    * * * *
+    * * * * *
+ */
 
 public class StarPattern4 {
     public static void main(String[] args) {
