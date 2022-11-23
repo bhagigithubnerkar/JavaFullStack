@@ -1,5 +1,7 @@
 package inheritance;
 
+// Single Inheritance
+
 public class Employee {
     int id = 1;
     String name = "Pooja";
