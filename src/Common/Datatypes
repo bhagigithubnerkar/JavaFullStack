@@ -1,0 +1,9 @@
+ Specify the different sizes & values that can be stored in the variable.
+  Types:
+  1.Primitive data type:
+       int,boolean,char,byte,short,long,float & double
+
+  2.Non-primitive data type:
+      Classes,interface & arrays
+
+  Statistically-typed language means all variables need to be declared before use.

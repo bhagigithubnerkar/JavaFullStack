@@ -1,0 +1,23 @@
+1.Unary Operator:
+    expr++,expr--(postfix)
+    ++expr,--expr(prefix)
+    ~(tilt),!
+
+ 2. Arithmetic Operator
+    *,/,+,-,%(modulo)
+
+ 3. Shift Operator
+     <<, >>
+
+ 4. Relational Operators
+    <,>,<=,>=
+
+ 5. Ternary Operator
+     ?:
+
+ 6. Logical AND (&&) , Logical OR (||)
+
+ 7. Bitwise AND (&) , Bitwise OR (|)
+
+ 8. Assignment Operator
+    +=,-=,*=,/=
