@@ -1,0 +1,150 @@
+to handle the runtime errors.
+
+Types:
+a) Built-In Exception
+1. Checked Exception
+            - compile time exception
+            - IOException, SQLException
+2. Unchecked Exception
+            - run tme exception
+
+Error:
+   - irrecoverable
+
+
+   Throwable
+            - Exception
+                     - IOException
+                     - SQLException
+                     - ClassNotFoundException
+                     - FileNotFoundException
+                     - RuntimeException
+                              - ArithmeticException
+                              - NullPointerException
+                              - IndexOutOfBoundException
+                              - NumberFormatException
+
+ - Error
+          - StackOverFlowError
+          - OutOfMemoryError
+          - VirtualMachineError
+
+Reasons for exceptions:
+1. Invalid user input
+2. Network connection error
+3. Out of memory
+
+1. try
+       - Place an exception code.
+       - Must be followed by either catch or finally
+
+2. catch
+       - Handle the exception
+       - Without try not allow
+
+3. finally
+       - to execute code like closing the connection
+       - always executed whether exception is handled or not
+       - eg. closing the file,closing database connection
+       - only one finally block
+
+4. throw
+       - to throw an exception explicitly
+       - can throw either checked or unchecked exception
+
+5. throws
+       - declare the exception
+       - suppress the exception
+
+
+
+Difference between final & finally
+      final                                               finally                                   finalize
+1.It is the keyword & access modifier.            1. It is the block in Exception Handling.        1.It is the method which is used to perform  clean up
+                                                                                                     processing just before object is garbage collected
+
+2.Used to apply restrictions on a class,          2.Checks whether the exception occurs or not.    2.finalize() method is used with the objects
+method or variable.
+
+3.It is applicable to classes,methods and         3.It is related to the try and catch block in    3.To perform cleaning activities with respect to
+  variables.                                         exception handling                               the object before its destruction          .                                      exception handling.
+
+4.Once declared,final variable becomes            4.finally block runs code even if exception      4.It is executed just before the object is
+constant & cannot be modified.                      occurs or not.                                   destroyed.
+
+5.final method cannot be overridden by            5.finally block clean up all resources used in
+sub class.                                           try block.
+
+6.final class cannot be inherited.                6.finally block is executed when try-catch block
+                                                    is executed.
+
+7.final method is executed only when
+ we call it.
+
+
+Difference between throw & throws
+         throw                                    throws
+1. used to throw an exception                   1.declare the exception
+explicitly
+
+2.can only propagate unchecked                 2.can used to propagate both checked &
+exception                                        unchecked exception
+
+3.within the method                            3. with the method signature
+
+4.cannot throw multiple exceptions             4.declare multiple exceptions using throws keyword
+
+5.eg. NullPointerException,Arithmetic          5.eg. main() throws IO Exception,SQl Exception
+  Exception
+
+Nested Try :
+- try inside another try
+- Sometimes a situation may arise where part of a block may
+cause one error and the entire block itself may cause another error.
+In such cases exception handlers have to be nested.
+
+Exception Propagation:
+- When an exception occurs within a method then if that method does
+not handle that exception object.
+- Will be propagated to caller than the call method is responsible
+that exception
+- An exception is thrown from the top of the stack & if it not caught,
+then it drops down the call stack
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -17,3 +17,8 @@ Types:
                   3) datatype var[];
 
 2. Multi Dimensional Array
+         Syntax:
+                  1) datatype[][] var_name;
+                  2) datatype [][]var_name;
+                  3) datatype var_name[][];
+                  4) datatype []var_name[];

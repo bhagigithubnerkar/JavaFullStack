@@ -1,0 +1,68 @@
+Sequence of characters
+array of characters
+final class
+implements Serializable,Comparable,Charsequence,Constable,ConstantDesc
+
+Ways to create a String:
+1. char[] ch = { 'w','E','L','C','O','M','E'}
+
+-- By using new keyword
+2. String s = new String(ch);
+
+-- By using String literal
+3. String s1 = "WELCOME";
+
+String Constant Pool:
+ @ the time when we create a string literal,the JVM first checks the SCP.
+      If the string is already exists in pool, a ref to the pooled instance is returned,
+      otherwise a new string instance is created in pool.
+      Only one object will be created.
+
+ Immutable String :
+ Unmodifiable or unchangable
+ State & data can not be changed
+
+ String Compare:
+ 1. By using equals() method
+    - compares the content of string
+ 2. By using == operator
+    - compares references not content
+ 3. By compareTo() method
+    - compares the values lexicographically & return an integer
+    a)  0 : s1==s2
+    b)> 0 : s1>s2
+    c)< 0 : s1<s2
+
+ Notes:
+ 1. before Java 7,JVM string pool in PermGen space, which has a fixed size.
+    so can not be expanded at runtime, & is not eligible for garbage collection
+    we can get an OutOfMemoryError.
+
+ 2. from Java 7,SCP is stored in Heap Area,which is garbage collected by JVM.
+    reduced risk of an OutOfMemoryError because unreferenced strings will be
+    removed from th pool,thereby releasing memory.
+
+ String Concatenation:
+ Combination of multiple strings.
+ 1. by using + operator
+ 2. concat method
+
+ Substring:
+  - Part of string
+
+  String Buffer:
+  a final class
+  implements Serializable,Comparable<StringBuffer>,Charsequence
+  a thread safe so multiple threads can not access it simultaneously
+  methods are synchronised
+  mutable(modifiable) i.e. it can be changed
+  capacity() returns the current capacity of the buffer.
+  default capacity of buffer is 16.
+
+
+  Homework:
+  1. Enter your name:
+  Bhagyashri Chetan Nerkar
+  output B. C. Nerkar
+
+
