@@ -40,7 +40,7 @@ String Constant Pool:
 
  2. from Java 7,SCP is stored in Heap Area,which is garbage collected by JVM.
     reduced risk of an OutOfMemoryError because unreferenced strings will be
-    removed from th pool,thereby releasing memory.
+    removed from the pool,thereby releasing memory.
 
  String Concatenation:
  Combination of multiple strings.
@@ -52,7 +52,7 @@ String Constant Pool:
 
   String Buffer:
   a final class
-  implements Serializable,Comparable<StringBuffer>,Charsequence
+  implements Serializable,Comparable<StringBuffer>,CharSequence
   a thread safe so multiple threads can not access it simultaneously
   methods are synchronised
   mutable(modifiable) i.e. it can be changed
@@ -65,4 +65,37 @@ String Constant Pool:
   Bhagyashri Chetan Nerkar
   output B. C. Nerkar
 
+  String Builder:
+  a final class
+  implements java.io.Serializable,Comparable<StringBuilder>,CharSequence
+  mutable(modifiable) i.e. it can be changed
+  methods are non-synchronised
+  not a thread safe
 
+  Steps from Custom Immutable class
+  1.create a final class
+  2.make instance variables of the class as final
+  3.no setter methods
+
+  Diff between String,StringBuffer,StringBuilder
+
+
+     String                StringBuffer                  StringBuilder
+ 1. final class           1.final class                  1.final class
+
+ 2. Immutable             2.mutable                      2. mutable
+
+ 3. non-thread            3.thread safe                  3. non-thread safe
+   safe
+
+ 4.non-synchronized       4.synchronized                 4. non-synchronized
+
+ 5.string is slow and     5.slower than stringBuilder    5. faster than stringBuffer
+   consumes more memory     & faster than string.          & string
+
+ 6.overrides equals()    6.doesn't override             6.doesn't override
+
+ 7.stored in SCP          7.stored in Heap area          7.stored in Heap area
+
+ 8.less efficient         8.less efficient than          8.more efficient than
+                            stringBuilder                  stringBuffer

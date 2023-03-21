@@ -1,0 +1,30 @@
+used to restrict the user
+
+1. variable:
+          - cannot chnage the value of final variable
+          - stop value change
+
+blank final variable:
+          - not initialised at the time of declaration
+          - only in constructor we can initialized blank final variable.
+
+static blank final variable:
+          - not initialised at the time of declaration
+          - only in static block we can initialized static blank final variable
+
+2. method
+         - method cannot be overridden
+
+3. class
+        - cannot extend final class
+
+Que.why do we need final keyword?
+Ans: The final keyword is a non-access modifier used for classes,attributes & methods,
+which makes them non-changeable.It is useful when we want a variable always store the same value.
+It is a modifier.The value assignment can be done only once.We can assign the value upon final
+instance variable declaration,in the instance initializer block or in the constructor.
+
+Que. why a constructor can not be final in java?
+Ans: Because it inherently it cannot be modified. Also,a java constructor is internally final.
+So again there is no need for final declaration further.
+Constructors cannot be inherited in java.

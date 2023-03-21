@@ -1,0 +1,82 @@
+  difference between process and thread
+       Process                           Thread
+ 1. Is an instance of a program         1.Is a lightweight process that is
+ that is being executed.                  managed by thread scheduler independently.
+
+ 2.Are independent and hence            2.Are interdependent and
+ don't share any memory                   share memory
+
+ 3.If one process gets blocked          3.If any thread gets blocked,all of its
+ by os,then other process                 peer threads also get blocked because OS
+ continue execution.                      takes all of them as single process.
+
+ 4.Context switching time              4. Context switching time between the threads
+ between two processes is slow            is fast because they are lightweight.
+ as they are heavy.
+
+ 5.The OS takes more time to           5. Threads can be terminated in very
+ terminate a process.                     little time.
+
+
+
+
+
+
+
+
+
+ difference between wait() & sleep()
+       Wait()                                 Sleep()                             yield()                        join()
+1.The wait() method is related     1.The sleep() method is related       1.The yield() method is           1.The join() method is related
+ to the object class.                to the thread class.                  related to thread class           to thread class
+
+2.It is not a static method.       2.It is a static method.              2.It is a static method           2.It is not a static method.
+
+3.At the time of synchronization,  3.At the time of synchronization,     3.
+the wait() method releases object. sleep() method doesn't release the
+                                   object i.e the lock.
+
+4.we can call wait() method only   4.we can call sleep() method from     4.we can call yield() method      4.we can call join() method from
+from the synchronized context.      outside the Synchronized context.      from outside the Synchronized     outside the Synchronized context
+                                                                            context
+
+5.overloaded method                5.overloaded method                   5.not overloaded                  5. overloaded method
+
+6.throws IllegalMonitorState       6. throws IllegalArgumentException    6.no                              6.throws IllegalArgumentException
+Exception.
+
+7.To give up the lock & go to      7.sleep the current executing thread  7.to pause the current executing   7. to pause the execution of curernt thread
+sleep until some other threads       for specified no of time & start      thread & give chance to other       until & unless the specified thred is dead.
+call notify() or notifyAll().        the execution from where it left      threads of same or higher property
+                                                                            to execute
+
+ finalize() method in java:
+ It is a method of object class that is used to perform cleanup activity before destroying any object.
+ It is called by default for every object before its deletion.
+ It helps the garbage collector to close all the resources used by the object.
+ It helps JVM in memory optimisation.
+ The garbage collector calls finalize() method only once on any object.
+ Syntax: protected void finalize throws Throwable{}
+
+ gc() method :
+ The gc() method of System class runs the garbage collector.
+ Through this method,JVM makes best effort to reuse the memory of discarded objects for quick reuse.
+ Syntax: public static void gc()
+
+ Difference between final,finally and finalize
+        final                                                  finally                                   finalize
+1.It is the keyword & access modifier used to        1.It is a block in Exception Handling to      1.It is a method which is used to perform
+apply restrictions on a class,method or variable.      execute the important code whether the        cleanup activity just before the object
+                                                       exception occurs or not.                       is garbage collected.
+
+2.It is used with classes,methods & variables.       2.It is always related to try and catch        2.This method is used with the objects.
+                                                       block in exception handling.
+
+3.final variable once declared,becomes constant      3.finally block cleans up all the resources     3.finalize method performs cleanup activities
+  & cannot be modified.                                 used in try block.                              w.r.t object before its destruction.
+  final method cannot be overridden by sub class.
+  final class cannot be inherited.
+
+4.Final method is executed only when we call it.     4.Finally block is executed as soon as the       4.finalize method is executed just before
+                                                       try-catch block is executed.It's execution       the object is destroyed.
+                                                       doesn't depend on the exception.

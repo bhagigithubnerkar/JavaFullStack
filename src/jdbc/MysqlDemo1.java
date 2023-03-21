@@ -15,11 +15,11 @@ public class MysqlDemo1 {
         Statement statement = con.createStatement();
         ResultSet rs = statement.executeQuery(selectAll);
         while (rs.next()) {
-            System.out.println("Roll No" + rs.getInt(1));
-            System.out.println("Name" + rs.getString(2));
-            System.out.println("Age" + rs.getInt(3));
-            System.out.println("Class" + rs.getString(4));
-            System.out.println("City" + rs.getString(5));
+            System.out.println("Roll No " + rs.getInt(1));
+            System.out.println("Name    " + rs.getString(2));
+            System.out.println("Age     " + rs.getInt(3));
+            System.out.println("Class   " + rs.getString(4));
+            System.out.println("City    " + rs.getString(5));
         }
         con.close();
 

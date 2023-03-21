@@ -38,10 +38,11 @@ public class StudentOperations {
             }
         } while (ch <= 5);
 
+
     }
 
     private static void updateStudent(Scanner sc, PreparedStatement ps, Connection con) throws SQLException {
-        String updateQuery = ("update student set Roll No=?, Name=?");
+        String updateQuery = ("update student set rno=?, Name=?");
         ps = con.prepareStatement(updateQuery);
         System.out.println("Enter RoLL No");
         int rno = sc.nextInt();

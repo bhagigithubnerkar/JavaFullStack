@@ -1,7 +1,21 @@
 package Common;
 
+/**
+ * Specify the different sizes & values that can be stored in the variable.
+ * Types:
+ * 1.Primitive data type:
+ * int,boolean,char,byte,short,long,float & double
+ * <p>
+ * 2.Non-primitive data type:
+ * Classes,interface & arrays
+ * <p>
+ * Statistically-typed language means all variables need to be declared before use.
+ **/
+
 public class Datatypes {
+
     public static void main(String[] args) {
+
         boolean flag = true;    // 1 bit  //default false
         char c = 'A';  // 2 byte
 

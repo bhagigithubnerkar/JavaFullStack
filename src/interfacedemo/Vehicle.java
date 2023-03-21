@@ -2,13 +2,17 @@ package interfacedemo;
 
 public interface Vehicle {
     void run();
-  }
-
-  interface Car{
-    void drive();
 }
 
-class Bike implements Vehicle{
+class Car {
+    void drive() {
+        System.out.println("in drive method");
+    }
+
+
+}
+
+class Bike implements Vehicle {
 
     @Override
     public void run() {
@@ -21,6 +25,7 @@ class Bicycle implements Vehicle{
 
     @Override
     public void run() {
+
         System.out.println("in run method");
     }
 }

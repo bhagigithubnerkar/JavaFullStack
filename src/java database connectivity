@@ -53,6 +53,11 @@ JDBC Driver
                 3. Network Protocol Driver
                 4. Thin Driver(fully written in JAVA)
 
+ 1. Driver Manager
+ 2. Connection
+ 3. Statement
+ 4. ResultSet
+
 
 
 
@@ -77,3 +82,42 @@ rno  name     age    class   city
 1   Abhijeet  16     12th    Pune
 
 1 row in set (0.00 sec)
+
+mysql> update student set class = 'MCA' where name = 'Vaibhav';
+Query OK, 1 row affected (0.00 sec)
+mysql> delete from student where rno = 4;
+Query Ok, 1 row affected (0.00 sec)
+
+
+mysql> alter table student add email varchar(255);
+Query OK,0 rows affected (0.03 sec)
+Records: 0 duplicates:0 warnings:0
+
+// Stored Procedure
+    - pre compiled SQL statements stored in database
+    Types:
+    1. procedure with no parameter
+    2. procedure with IN parameter
+    3. procedure with OUT parameter
+    4. procedure with IN-OUT parameter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

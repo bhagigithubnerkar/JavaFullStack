@@ -1,0 +1,34 @@
+- a blueprint of a class
+- contains abstract methods & static constant
+- methods are public & abstract by default
+- variables are static & final
+- used to achieve abstraction & multiple inheritance
+- used to achieve abstraction
+- support the functionality of multiple inheritance
+- used to achieve loose coupling
+- represents IS-A relationship
+- interface cannot instantiated
+
+relationship between
+class ---> class --- extends
+interface ---> class --- implements
+interface ---> interface --- extends
+
+Marker interface
+- empty interface
+- interface which has no member (no methods/no fields)
+- tagged interface
+- used to provide some essential info to JVM so that JVM may perform some useful operation
+eg. Serializable,Cloneable & Rmeote,etc.
+
+instanceof
+- used to check whether an object is a specified class/interface or not.
+
+Difference between Abstract & Interface
+
+     Abstract class                          Interface
+1. can have abstract/Non-abstract        1. only have abstract
+methods.                                    methods.
+
+2.doesn't support Multiple               2. support Multiple
+Inheritance.                                Inheritance
